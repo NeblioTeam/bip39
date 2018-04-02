@@ -2,7 +2,7 @@
 <html>
     <head lang="en">
         <meta charset="utf-8" />
-        <title>BIP39 - Mnemonic Code</title>
+        <title>BIP39 Neblio - Mnemonic Code</title>
         <style>/*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -6870,7 +6870,7 @@ button.close {
         <meta content="Mnemonic code for generating deterministic keys" name="description"/>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="bitcoin mnemonic converter" name="description" />
-        <meta content="Ian Coleman" name="author" />
+        <meta content="Neblio Team" name="author" />
         <link type="image/x-icon" rel="icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" />
     </head>
     <body>
@@ -7615,7 +7615,7 @@ button.close {
                     </p>
                     <h3>License</h3>
                     <p>
-                    <span>Please refer to <a href="https://github.com/iancoleman/bip39/blob/master/LICENSE" target="_blank">the software license</a> for more detail.
+                    <span>Please refer to <a href="https://github.com/NeblioTeam/bip39/blob/master/LICENSE" target="_blank">the software license</a> for more detail.
                     </span>
                     </p>
                     <p>The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.</p>
@@ -7626,12 +7626,11 @@ button.close {
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Alternative Tools</h2>
-                    <p>This tool is interoperable with any BIP39 wallet.</p>
-                    <p>Some similar tools to this one (ie not consumer wallets) are</p>
+                    <h2>Based On</h2>
+                    <p>This tool is based on the great bip39 tool from Ian Coleman.</p>
                     <p>
-                        <a href="https://bip32jp.github.io/english/">
-                            https://bip32jp.github.io/english/
+                        <a href="https://github.com/iancoleman/bip39">
+                            https://github.com/iancoleman/bip39
                         </a>
                     </p>
                 </div>
@@ -7658,7 +7657,7 @@ button.close {
                     <p>
                     <span>Alternatively, download the file from the repository</span>
                     -
-                    <a href="https://github.com/iancoleman/bip39">https://github.com/iancoleman/bip39</a>
+                    <a href="https://github.com/NeblioTeam/bip39">https://github.com/NeblioTeam/bip39</a>
                     </p>
 
                 </div>
@@ -7674,8 +7673,8 @@ button.close {
                     <p>
                         <span>Get the source code from the repository</span>
                         -
-                        <a href="https://github.com/iancoleman/bip39" target="_blank">
-                            https://github.com/iancoleman/bip39
+                        <a href="https://github.com/NeblioTeam/bip39" target="_blank">
+                            https://github.com/NeblioTeam/bip39
                         </a>
                     </p>
 
@@ -97078,14 +97077,6 @@ window.Entropy = new (function() {
 
     var networks = [
         {
-            name: "NEBL - Neblio - Standard",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.neblio;
-                setHdCoin(146);
-            },
-        },
-        {
             name: "NEBL - Neblio - Orion",
             segwitAvailable: false,
             onSelect: function() {
@@ -97094,10 +97085,10 @@ window.Entropy = new (function() {
             },
         },
         {
-            name: "NEBL - Neblio Testnet - Standard",
+            name: "NEBL - Neblio - Standard (Electrum, Android, etc)",
             segwitAvailable: false,
             onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.neblio_testnet;
+                network = bitcoinjs.bitcoin.networks.neblio;
                 setHdCoin(146);
             },
         },
@@ -97109,6 +97100,15 @@ window.Entropy = new (function() {
                 setHdCoin(1);
             },
         },
+        {
+            name: "NEBL - Neblio Testnet - Standard (Electrum, Android, etc)",
+            segwitAvailable: false,
+            onSelect: function() {
+                network = bitcoinjs.bitcoin.networks.neblio_testnet;
+                setHdCoin(146);
+            },
+        },
+
     ]
 
     var clients = [

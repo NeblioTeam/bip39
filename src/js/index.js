@@ -1515,14 +1515,6 @@
 
     var networks = [
         {
-            name: "NEBL - Neblio - Standard",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.neblio;
-                setHdCoin(146);
-            },
-        },
-        {
             name: "NEBL - Neblio - Orion",
             segwitAvailable: false,
             onSelect: function() {
@@ -1531,10 +1523,10 @@
             },
         },
         {
-            name: "NEBL - Neblio Testnet - Standard",
+            name: "NEBL - Neblio - Standard (Electrum, Android, etc)",
             segwitAvailable: false,
             onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.neblio_testnet;
+                network = bitcoinjs.bitcoin.networks.neblio;
                 setHdCoin(146);
             },
         },
@@ -1546,6 +1538,15 @@
                 setHdCoin(1);
             },
         },
+        {
+            name: "NEBL - Neblio Testnet - Standard (Electrum, Android, etc)",
+            segwitAvailable: false,
+            onSelect: function() {
+                network = bitcoinjs.bitcoin.networks.neblio_testnet;
+                setHdCoin(146);
+            },
+        },
+
     ]
 
     var clients = [
