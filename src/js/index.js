@@ -501,9 +501,9 @@
     }
 
     function showValidationError(errorText) {
-        DOM.feedback
-            .text(errorText)
-            .show();
+        // DOM.feedback
+        //     .text(errorText)
+        //     .show();
     }
 
     function hideValidationError() {
@@ -977,9 +977,9 @@
     }
 
     function showPending() {
-        DOM.feedback
-            .text("Calculating...")
-            .show();
+        // DOM.feedback
+        //     .text("Calculating...")
+        //     .show();
     }
 
     function findNearestWord(word) {
