@@ -1515,177 +1515,7 @@
 
     var networks = [
         {
-            name: "AXE - Axe",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.axe;
-                setHdCoin(0);
-            },
-        },
-        {
-            name: "BCH - Bitcoin Cash",
-            segwitAvailable: false,
-            onSelect: function() {
-                DOM.useBitpayAddressesContainer.removeClass("hidden");
-                setBitcoinCashNetworkValues();
-                setHdCoin(145);
-            },
-        },
-        {
-            name: "BEET - Beetlecoin",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.beetlecoin;
-                setHdCoin(800);
-            },
-        },
-        {
-            name: "BLK - BlackCoin",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.blackcoin;
-                setHdCoin(10);
-            },
-        },
-        {
-            name: "BTC - Bitcoin",
-            segwitAvailable: true,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.bitcoin;
-                setHdCoin(0);
-            },
-        },
-        {
-            name: "BTC - Bitcoin Testnet",
-            segwitAvailable: true,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.testnet;
-                setHdCoin(1);
-            },
-        },
-        {
-            name: "BTG - Bitcoin Gold",
-            segwitAvailable: true,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.bgold;
-                setHdCoin(156);
-            },
-        },
-        {
-            name: "CLAM - Clams",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.clam;
-                setHdCoin(23);
-            },
-        },
-        {
-            name: "CRW - Crown",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.crown;
-                setHdCoin(72);
-            },
-        },
-        {
-            name: "DASH - Dash",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.dash;
-                setHdCoin(5);
-            },
-        },
-        {
-            name: "DASH - Dash Testnet",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.dashtn;
-                setHdCoin(1);
-            },
-        },
-        {
-            name: "DNR - Denarius",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.denarius;
-                setHdCoin(116);
-            },
-        },
-        {
-            name: "DOGE - Dogecoin",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.dogecoin;
-                setHdCoin(3);
-            },
-        },
-        {
-            name: "ETH - Ethereum",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.bitcoin;
-                setHdCoin(60);
-            },
-        },
-        {
-            name: "FJC - Fujicoin",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.fujicoin;
-                setHdCoin(75);
-            },
-        },
-        {
-            name: "GAME - GameCredits",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.game;
-                setHdCoin(101);
-            },
-        },
-        {
-            name: "JBS - Jumbucks",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.jumbucks;
-                setHdCoin(26);
-            },
-        },
-        {
-            name: "KMD - Komodo",
-            bip49available: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.komodo;
-                setHdCoin(141);
-            },
-        },
-        {
-            name: "LTC - Litecoin",
-            segwitAvailable: true,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.litecoin;
-                setHdCoin(2);
-                DOM.litecoinLtubContainer.removeClass("hidden");
-            },
-        },
-        {
-            name: "MAZA - Maza",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.maza;
-                setHdCoin(13);
-            },
-        },
-        {
-            name: "MONA - Monacoin",
-            segwitAvailable: true,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.monacoin,
-                setHdCoin(22);
-            },
-        },
-        {
-            name: "NEBL - Neblio",
+            name: "NEBL - Neblio - Standard",
             segwitAvailable: false,
             onSelect: function() {
                 network = bitcoinjs.bitcoin.networks.neblio;
@@ -1693,115 +1523,27 @@
             },
         },
         {
-            name: "NMC - Namecoin",
+            name: "NEBL - Neblio - Orion",
             segwitAvailable: false,
             onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.namecoin;
-                setHdCoin(7);
+                network = bitcoinjs.bitcoin.networks.neblio;
+                setHdCoin(0);
             },
         },
         {
-            name: "ONX - Onixcoin",
+            name: "NEBL - Neblio Testnet - Standard",
             segwitAvailable: false,
             onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.onixcoin;
-                setHdCoin(174);
+                network = bitcoinjs.bitcoin.networks.neblio_testnet;
+                setHdCoin(146);
             },
         },
         {
-            name: "PIVX - PIVX",
+            name: "NEBL - Neblio Testnet - Orion",
             segwitAvailable: false,
             onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.pivx;
-                setHdCoin(119);
-            },
-        },
-        {
-            name: "PIVX - PIVX Testnet",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.pivxtestnet;
+                network = bitcoinjs.bitcoin.networks.neblio_testnet;
                 setHdCoin(1);
-            },
-        },
-        {
-            name: "PPC - Peercoin",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.peercoin;
-                setHdCoin(6);
-            },
-        },
-        {
-            name: "SDC - ShadowCash",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.shadow;
-                setHdCoin(35);
-            },
-        },
-        {
-            name: "SDC - ShadowCash Testnet",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.shadowtn;
-                setHdCoin(1);
-            },
-        },
-        {
-            name: "SLM - Slimcoin",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.slimcoin;
-                setHdCoin(63);
-            },
-        },
-        {
-            name: "SLM - Slimcoin Testnet",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.slimcointn;
-                setHdCoin(111);
-            },
-        },
-        {
-            name: "USNBT - NuBits",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.nubits;
-                setHdCoin(12);
-            },
-        },
-        {
-            name: "VIA - Viacoin",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.viacoin;
-                setHdCoin(14);
-            },
-        },
-        {
-            name: "VIA - Viacoin Testnet",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.viacointestnet;
-                setHdCoin(1);
-            },
-        },
-        {
-            name: "XMY - Myriadcoin",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.myriadcoin;
-                setHdCoin(90);
-            },
-        },
-        {
-            name: "XRP - Ripple",
-            segwitAvailable: false,
-            onSelect: function() {
-                network = bitcoinjs.bitcoin.networks.bitcoin;
-                setHdCoin(144);
             },
         },
     ]
