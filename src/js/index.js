@@ -929,33 +929,35 @@
     }
 
     function addAddressToList(indexText, address, pubkey, privkey) {
-        var row = $(addressRowTemplate.html());
-        // Elements
-        var indexCell = row.find(".index span");
-        var addressCell = row.find(".address span");
-        var pubkeyCell = row.find(".pubkey span");
-        var privkeyCell = row.find(".privkey span");
-        // Content
-        indexCell.text(indexText);
-        addressCell.text(address);
-        pubkeyCell.text(pubkey);
-        privkeyCell.text(privkey);
-        // Visibility
-        if (!showIndex) {
-            indexCell.addClass("invisible");
-        }
-        if (!showAddress) {
-            addressCell.addClass("invisible");
-        }
-        if (!showPubKey) {
-            pubkeyCell.addClass("invisible");
-        }
-        if (!showPrivKey) {
-            privkeyCell.addClass("invisible");
-        }
-        DOM.addresses.append(row);
-        var rowShowQrEls = row.find("[data-show-qr]");
-        setQrEvents(rowShowQrEls);
+    	jQuery(document).ready(function($) {
+	        var row = $(addressRowTemplate.html());
+	        // Elements
+	        var indexCell = row.find(".index span");
+	        var addressCell = row.find(".address span");
+	        var pubkeyCell = row.find(".pubkey span");
+	        var privkeyCell = row.find(".privkey span");
+	        // Content
+	        indexCell.text(indexText);
+	        addressCell.text(address);
+	        pubkeyCell.text(pubkey);
+	        privkeyCell.text(privkey);
+	        // Visibility
+	        if (!showIndex) {
+	            indexCell.addClass("invisible");
+	        }
+	        if (!showAddress) {
+	            addressCell.addClass("invisible");
+	        }
+	        if (!showPubKey) {
+	            pubkeyCell.addClass("invisible");
+	        }
+	        if (!showPrivKey) {
+	            privkeyCell.addClass("invisible");
+	        }
+	        DOM.addresses.append(row);
+	        var rowShowQrEls = row.find("[data-show-qr]");
+	        setQrEvents(rowShowQrEls);
+	    });
     }
 
     function hasStrongRandom() {
