@@ -17,5 +17,5 @@ bitcoinjs.bitcoin.networks.neblio_testnet = {
   },
   pubKeyHash: 0x41,
   scriptHash: 0x7f,
-  wif: 0xb5
+  wif: 0xc1
 };

@@ -42012,7 +42012,7 @@ bitcoinjs.bitcoin.networks.neblio_testnet = {
   },
   pubKeyHash: 0x41,
   scriptHash: 0x7f,
-  wif: 0xb5
+  wif: 0xc1
 };
 </script>
         <script>(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.bitcoinjsBip38 = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
@@ -95978,23 +95978,31 @@ window.Entropy = new (function() {
     }
 
     function toggleIndexes() {
-        showIndex = !showIndex;
-        $("td.index span").toggleClass("invisible");
+    	jQuery(document).ready(function($) {
+        	showIndex = !showIndex;
+        	$("td.index span").toggleClass("invisible");
+        });
     }
 
     function toggleAddresses() {
-        showAddress = !showAddress;
-        $("td.address span").toggleClass("invisible");
+    	jQuery(document).ready(function($) {
+        	showAddress = !showAddress;
+        	$("td.address span").toggleClass("invisible");
+        });
     }
 
     function togglePublicKeys() {
-        showPubKey = !showPubKey;
-        $("td.pubkey span").toggleClass("invisible");
+    	jQuery(document).ready(function($) {
+        	showPubKey = !showPubKey;
+        	$("td.pubkey span").toggleClass("invisible");
+        });
     }
 
     function togglePrivateKeys() {
-        showPrivKey = !showPrivKey;
-        $("td.privkey span").toggleClass("invisible");
+    	jQuery(document).ready(function($) {
+        	showPrivKey = !showPrivKey;
+        	$("td.privkey span").toggleClass("invisible");
+        });
     }
 
     // Private methods
@@ -97053,23 +97061,25 @@ window.Entropy = new (function() {
     }
 
     function updateCsv() {
-        var tableCsv = "path,address,public key,private key\n";
-        var rows = DOM.addresses.find("tr");
-        for (var i=0; i<rows.length; i++) {
-            var row = $(rows[i]);
-            var cells = row.find("td");
-            for (var j=0; j<cells.length; j++) {
-                var cell = $(cells[j]);
-                if (!cell.children().hasClass("invisible")) {
-                    tableCsv = tableCsv + cell.text();
-                }
-                if (j != cells.length - 1) {
-                    tableCsv = tableCsv + ",";
-                }
-            }
-            tableCsv = tableCsv + "\n";
-        }
-        DOM.csv.val(tableCsv);
+    	jQuery(document).ready(function($) {
+	        var tableCsv = "path,address,public key,private key\n";
+	        var rows = DOM.addresses.find("tr");
+	        for (var i=0; i<rows.length; i++) {
+	            var row = $(rows[i]);
+	            var cells = row.find("td");
+	            for (var j=0; j<cells.length; j++) {
+	                var cell = $(cells[j]);
+	                if (!cell.children().hasClass("invisible")) {
+	                    tableCsv = tableCsv + cell.text();
+	                }
+	                if (j != cells.length - 1) {
+	                    tableCsv = tableCsv + ",";
+	                }
+	            }
+	            tableCsv = tableCsv + "\n";
+	        }
+	        DOM.csv.val(tableCsv);
+	    });
     }
 
     function addSpacesEveryElevenBits(binaryStr) {

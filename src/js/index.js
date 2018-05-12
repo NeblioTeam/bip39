@@ -417,23 +417,31 @@
     }
 
     function toggleIndexes() {
-        showIndex = !showIndex;
-        $("td.index span").toggleClass("invisible");
+    	jQuery(document).ready(function($) {
+        	showIndex = !showIndex;
+        	$("td.index span").toggleClass("invisible");
+        });
     }
 
     function toggleAddresses() {
-        showAddress = !showAddress;
-        $("td.address span").toggleClass("invisible");
+    	jQuery(document).ready(function($) {
+        	showAddress = !showAddress;
+        	$("td.address span").toggleClass("invisible");
+        });
     }
 
     function togglePublicKeys() {
-        showPubKey = !showPubKey;
-        $("td.pubkey span").toggleClass("invisible");
+    	jQuery(document).ready(function($) {
+        	showPubKey = !showPubKey;
+        	$("td.pubkey span").toggleClass("invisible");
+        });
     }
 
     function togglePrivateKeys() {
-        showPrivKey = !showPrivKey;
-        $("td.privkey span").toggleClass("invisible");
+    	jQuery(document).ready(function($) {
+        	showPrivKey = !showPrivKey;
+        	$("td.privkey span").toggleClass("invisible");
+        });
     }
 
     // Private methods
@@ -1492,23 +1500,25 @@
     }
 
     function updateCsv() {
-        var tableCsv = "path,address,public key,private key\n";
-        var rows = DOM.addresses.find("tr");
-        for (var i=0; i<rows.length; i++) {
-            var row = $(rows[i]);
-            var cells = row.find("td");
-            for (var j=0; j<cells.length; j++) {
-                var cell = $(cells[j]);
-                if (!cell.children().hasClass("invisible")) {
-                    tableCsv = tableCsv + cell.text();
-                }
-                if (j != cells.length - 1) {
-                    tableCsv = tableCsv + ",";
-                }
-            }
-            tableCsv = tableCsv + "\n";
-        }
-        DOM.csv.val(tableCsv);
+    	jQuery(document).ready(function($) {
+	        var tableCsv = "path,address,public key,private key\n";
+	        var rows = DOM.addresses.find("tr");
+	        for (var i=0; i<rows.length; i++) {
+	            var row = $(rows[i]);
+	            var cells = row.find("td");
+	            for (var j=0; j<cells.length; j++) {
+	                var cell = $(cells[j]);
+	                if (!cell.children().hasClass("invisible")) {
+	                    tableCsv = tableCsv + cell.text();
+	                }
+	                if (j != cells.length - 1) {
+	                    tableCsv = tableCsv + ",";
+	                }
+	            }
+	            tableCsv = tableCsv + "\n";
+	        }
+	        DOM.csv.val(tableCsv);
+	    });
     }
 
     function addSpacesEveryElevenBits(binaryStr) {
