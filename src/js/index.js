@@ -151,6 +151,8 @@
         hideValidationError();
         populateNetworkSelect();
         populateClientSelect();
+        network = bitcoinjs.bitcoin.networks.neblio;
+        setHdCoin(0);
     }
 
     // Event handlers
